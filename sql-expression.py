@@ -35,8 +35,6 @@ track_table = Table(
 with db.connect() as connection:
     select_query = artist_table.select()
 
-    select_query = artist_table.select().where(artist_table.c.AlbumId)
-
     results = connection.execute(select_query)
     for result in results:
         print(result)
